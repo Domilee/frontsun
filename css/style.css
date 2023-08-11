@@ -509,11 +509,25 @@ blockquote,
   box-sizing: border-box;
   padding: 20px 10px 10px 10px;
   margin: 20px 0;
-  border: 2px solid #bbb;
+  border: 2px solid;
   border-radius: 5px;
-  background-color: #f8f8f8;
+  background-color: var(--bg-color);
+  coler: var(--text-color);
 }
 
+:root {
+  --bg-color: #f8f8f8;
+  --border-color: #bbb;
+  --text-color: #333: ;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #333;
+    --text-color: #fff;
+    --border-color: #666;
+  }
+}
 blockquote::before,
 .stressed-quote::before {
   content: "";
