@@ -509,15 +509,15 @@ blockquote,
   box-sizing: border-box;
   padding: 20px 10px 10px 10px;
   margin: 20px 0;
-  border: 2px solid;
-  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
   background-color: var(--bg-color);
   coler: var(--text-color);
 }
 
 :root {
   --bg-color: #f8f8f8;
-  --border-color: #bbb;
+  --border-color: #bdbcbc;
   --text-color: #333: ;
 }
 
@@ -525,7 +525,7 @@ blockquote,
   :root {
     --bg-color: #333;
     --text-color: #fff;
-    --border-color: #666;
+    --border-color: #c0bcbc;
   }
 }
 blockquote::before,
