@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  *
  * @package Maupassant
@@ -1727,27 +1728,21 @@ em.search-keyword {
   text-shadow: 0;
 }
 
-.container {
-  display: flex;
+/* 当屏幕宽度 < 600px 时,应用以下样式 */
+@media screen and (max-width: 599px) {
+  .container {
+    flex-direction: column;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
-
-.content {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
-
-.container {
-  flex-flow: row wrap;
-}
-
-.content {
-  grid-template-rows: auto 1fr;
-}
-
-.container {
-  align-items: center;
-}
-
-.content > * {
-  grid-column: 1/3;
+/* 当屏幕宽度 > 600px 时,应用以下样式 */
+@media screen and (min-width: 600px) {
+  .container {
+    flex-flow: row nowrap;
+  }
+  .content {
+    grid-template-columns: 2fr 1fr;
+  }
 }
